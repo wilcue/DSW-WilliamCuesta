@@ -1,119 +1,49 @@
-<HTML>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <título>Etiquetas Básicas de HTML, atributos y valores</title>
-        <meta nombre="descripción" contenido="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="hoja de estilo" href="">
-    </head>
-    <body>
-        <header>
-            <h1> Etiquetas Básicas de HTML, atributos y valores</h1>
-        </header>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Temas
-                    <ul>
-                        <li>Etiquetas Básicas de HTML </li>
-                        <li>atributos y valores</li>
-                    </ul>
-                </li>
-                <li>Recursos Digitales
-                    <ul>
-                        <li>ETIQUETAS Y ATRIBUTOS EN HTML - Programación web #02</li>
-                        <a href="https://www.youtube.com/watch?v=gaxsPBw-fqQ"></a>
-                        <li>¿Qué son los ATRIBUTOS en HTML? (con ejemplos prácticos!) [Curso de HTML desde cero]</li>
-                        <a href="https://www.youtube.com/watch?v=AH0olSnnaRI"></a>
-                    </ul>
-                </li>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página con CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 1fr;
+      grid-template-areas:
+        "header header"
+        "sidebar content";
+      min-height: 100vh;
+    }
     
-                <li>Aprendizaje
-                    <ul>
-                        <li>Etiquetas Básicas de HTML</li>
-                        <li>atributos y valores</li>
-                    </ul>
-                </li>
+    header {
+      grid-area: header;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
     
-                <li>Acerca de</li>
-            </ul>
-        </nav>
-        <section>
-            <h2>Entendimiento de etiquetas basicas html atributos y valores</h2>
-            <p>
-                El proposito de este sitio es dar al alumno las herramientas basicas para conocer las eqiquetas basicas que componen un documento html,
-                asi como sus atributos y valores
+    sidebar {
+      grid-area: sidebar;
+      background-color: #e1e1e1;
+      padding: 20px;
+    }
     
-            </p>
+    content {
+      grid-area: content;
+      background-color: #ffffff;
+      padding: 20px;
+    }
     
-            <Article>
-                <h3>Etiquetas html</h3>
-                <P>
-                    Antes de entrar en materia, conviene explicar de que vamos a hablar. 
-                    Las etiquetas HTML son pequeños bloques de código, que indican al navegador como debe interpretar el contenido recogido entre 
-                    dichas etiquetas. Por ejemplo, si queremos «pintar» un párrafo de texto, hay una etiqueta especifica para que el navegador 
-                    interprete ese texto como un párrafo. Estas etiquetas cuentan además con atributos que podemos añadir y que en sí, 
-                    pueden determinar como será el comportamiento específico que tendrá la etiqueta. Te dejo por aquí un listado de atributos HTML 
-                    para complementar esta entrada.
-
-                    Las etiquetas HTML comienzan siempre con el símbolo «<» y finalizan con el símbolo «>». Entre medias de estos dos símbolos irá 
-                    el nombre de la etiqueta que queremos que el navegador interprete.
-
-                    Todas las etiquetas HTML están compuestas por una etiqueta de apertura, y una etiqueta de cierre. Aunque hay excepciones, 
-                    como por ejemplo la etiqueta para cargar una imagen que son llamadas etiquetas huérfanas, ya que solo tienen etiqueta de apertura.
-
-                    Las etiquetas de cierre se construyen con una barra «/» justo antes de la propia etiqueta y los símbolos «<» y «>». Resumiendo, 
-                    si queremos «pintar» un párrafo en la página web, abriremos con la etiqueta de apertura de párrafo «<p>», y cerraríamos con la 
-                        etiqueta de cierre «</p>»
-                    <p>
-                        https://carontestudio.com/blog/listado-de-etiquetas-html/
-                    </p>
-                    <img src="C:\Users\willi\OneDrive\Documentos\GitHub\DSW-WilliamCuesta\fase2\estrectura-etiquetas-html-1024x346.jpg" alt="">
-    
-                </P>
-    
-            </Article>
-            <article>
-                <h3>atributos y valores</h3>
-                <p>
-                    Los atributos en HTML se pueden considerar como información adicional que se coloca siempre en la etiqueta de apertura, 
-                    esto para añadir, complementar información o significado al elemento HTML al que estamos colocando.
-
-                    Cómo colocar atributos en HTML
-                    Un atributo se escribe de la siguiente manera: Atributo=“valor”  en esa forma, el nombre del atributo, seguido del signo 
-                    igual (=) y entre comillas el valor, todo esto siempre dentro de la etiqueta de apertura.
-
-                    Por lo tanto el atributo escrito en una etiqueta (por ejemplo párrafo) se ve así: <p atributo="valor">Este es un párrafo</p>
-               
-
-                </p>
-                <p>
-                    https://desarrolladoresweb.org/html/atributos-html/
-                </p>
-
-                      <img src="C:\Users\willi\OneDrive\Documentos\GitHub\DSW-WilliamCuesta\fase2\etiquetas.png" alt="">
-    
-                </p>
-    
-            </article>
-        </section>
-        <footer>
-            <p>
-                Estudiente : William Alexander Cuesta
-            </p>
-            <p>
-                Correo : wacuestas@unadvirtual.edu.co
-            </p>
-            
-           
-    
-        </footer>
-        <header>
-            <h2>            
-                Mockup
-            </h2>
-            <img src="C:\Users\willi\OneDrive\Documentos\GitHub\DSW-WilliamCuesta\fase2\Mockup.PNG" alt="">
-        </header>
-    
-    </body>
+    footer {
+      grid-column: 1 / span 2;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>Encabezado</header>
+  <sidebar>Barra lateral</sidebar>
+  <content>Contenido principal</content>
+  <footer>Pie de página</footer>
+</body>
+</html>
