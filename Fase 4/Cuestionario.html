@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cuestionario de Bootstrap</title>
+<script>
+function mostrarResultado() {
+    var respuestas = document.querySelectorAll('input[type="radio"]:checked');
+    var puntaje = 0;
+    
+    for (var i = 0; i < respuestas.length; i++) {
+        puntaje += parseInt(respuestas[i].value);
+    }
+    
+    document.getElementById('resultado').innerHTML = 'Puntaje: ' + puntaje;
+}
+</script>
+</head>
+<body>
+
+<h1>Cuestionario de Bootstrap</h1>
+
+<form>
+    <p>1. ¿Bootstrap es un lenguaje de desarollo?</p>
+    <label><input type="radio" name="p1" value="0"> Si</label>
+    <label><input type="radio" name="p1" value="0"> No</label>
+    
+    
+    <p>2. ¿Bootstrap permite la construcción de sitios web responsive para dispositivos móviles?</p>
+    <label><input type="radio" name="p2" value="0"> Si</label>
+    <label><input type="radio" name="p2" value="1"> No</label>
+    
+    
+    <p>3. ¿Bootstrap  permite modificar el back-end?</p>
+    <label><input type="radio" name="p3" value="0">Si</label>
+    <label><input type="radio" name="p3" value="0">No</label>
+    <label><input type="radio" name="p3" value="1"> Miguel de Cervantes</label>
+    
+    <p>4. ¿Qué es Bootstrap?</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="p1" value="0">
+        <label class="form-check-label">Un tipo de calzado</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="p1" value="1">
+        <label class="form-check-label">Un framework de diseño web</label>
+    </div>
+
+    <p>5. ¿Cuál es la última versión estable de Bootstrap?</p>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="p2" value="0">
+        <label class="form-check-label">2.0</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="p2" value="0">
+        <label class="form-check-label">3.0</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="p2" value="1">
+        <label class="form-check-label">5.0</label>
+    </div>
+
+<p>6. ¿Cuál es la clase de Bootstrap para crear un botón?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="p3" value="0">
+            <label class="form-check-label">btn-button</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="p3" value="1">
+            <label class="form-check-label">btn</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="p3" value="0">
+            <label class="form-check-label">button</label>
+        </div>
+
+
+
+
+    <br>
+    <button type="button" onclick="mostrarResultado()">Mostrar resultado</button>
+</form>
+
+<div id="resultado"></div>
+
+</body>
+</html>
