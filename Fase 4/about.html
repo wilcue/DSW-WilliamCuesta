@@ -48,6 +48,22 @@
       <!-- Copia el contenido del pie de página del index.html -->
     </footer>
   </div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <script>
+    class PruebaReact extends React.Component{
+      
+      render() {
+        return React.createElement('p',{},'PruebaReact');
+      }
+    }
+
+    const domContainer = document.querySelector('#app');
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(React.createElement(PruebaReact))
+  </script>
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
